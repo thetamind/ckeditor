@@ -16,7 +16,6 @@ module Ckeditor
         
         output_buffer = ActiveSupport::SafeBuffer.new
         output_buffer << instance_tag.to_text_area_tag(input_html)
-        output_buffer << javascript_tag(Utils.js_replace(hash['id'], options))
         
         output_buffer
       end
